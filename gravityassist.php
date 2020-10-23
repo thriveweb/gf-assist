@@ -164,7 +164,10 @@ class Gravityassist {
 		$hightlight = get_option('hightlight');
 		$midGrey = get_option('midGrey');
 		$error = get_option('error');
-		$inputBackground = get_option('inputBackground');
+		// $inputBackground = get_option('inputBackground');
+		// $inputColour = get_option('inputColour');
+		// --inputBackground: {$inputBackground};
+		// --inputColour: {$inputColour};
 
 		$label_top = get_option( 'label_top' );
 		$label_left = get_option( 'label_left' );
@@ -175,18 +178,14 @@ class Gravityassist {
 		:root {
 			--borderRadius: {$borderRadius}px;
 			--fontSize: {$fontSize}px;
-
-			--inputBackground: {$inputBackground};
 			--midGrey: {$midGrey};
 			--primary: {$primary};
 			--hightlight: {$hightlight};
 			--error: {$error};
 			--messageText: {$messageText};
 			--messageBackground: {$messageBackground};
-
-			--left:{$label_top}px;
 			--top: {$label_top}px;
-
+			--left:{$label_left}px;
 		}
 		.gfield .gfield_label {
 			left: {$label_top}px;
@@ -194,7 +193,6 @@ class Gravityassist {
 		}
 		.gfield.focused .gfield_label {
 			transform: translateY(-{$translateY}%);
-			font-size: 12px;
 		}
 		.gfield :focus::-webkit-input-placeholder {
 			color: {$placeholder_colour};
@@ -250,11 +248,12 @@ class Gravityassist {
 			register_setting( 'gravityassist-options-group', 'hightlight');
 			register_setting( 'gravityassist-options-group', 'midGrey');
 			register_setting( 'gravityassist-options-group', 'error');
-			register_setting( 'gravityassist-options-group', 'inputBackground');
 			register_setting( 'gravityassist-options-group', 'label_top' );
 			register_setting( 'gravityassist-options-group', 'label_left' );
 			register_setting( 'gravityassist-options-group', 'placeholder_colour' );
 			register_setting( 'gravityassist-options-group', 'translateY' );
+			// register_setting( 'gravityassist-options-group', 'inputBackground');
+			// register_setting( 'gravityassist-options-group', 'inputColour');
 		}
 		// Add type to li elements
 		add_filter( 'gform_field_css_class', 'custom_class', 10, 3 );

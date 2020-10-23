@@ -33,7 +33,7 @@ jQuery(function ($) {
     inputEl.forEach((inputEl) => {
       let inputValue = $(inputEl).val();
       console.log(inputValue);
-      if (inputValue.length < 0) {
+      if (inputValue === "") {
         $(inputEl).removeClass("filled");
         $(inputEl).parents(".gfield").removeClass("focused");
       } else {

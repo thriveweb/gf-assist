@@ -24,17 +24,17 @@ function gravityassist_page() {
 
             <div class="gravityassist-flex-row">
               <div class="gravityassist-section-box">
-                <h3>Colours options</h3>
+                <h3>Form Colours</h3>
                 <p class="gravityassist-flex">
-                  <label for="primary">Colour primary</label>
+                  <label for="primary">Label Colours</label>
                   <input type="text" name="primary" value="<?= get_option( 'primary' ); ?>" class="gravityassist-field" data-default-color="#000000" />
                 </p>
                 <p class="gravityassist-flex">
-                  <label for="hightlight">Colour hightlight</label>
+                  <label for="hightlight">Hightlight Colour</label>
                   <input type="text" name="hightlight" value="<?= get_option( 'hightlight' ); ?>" class="gravityassist-field" data-default-color="#000000" />
                 </p>
                 <p class="gravityassist-flex">
-                  <label for="midGrey">Colour midGrey</label>
+                  <label for="midGrey">De-selected Grey</label>
                   <input type="text" name="midGrey" value="<?= get_option( 'midGrey' ); ?>" class="gravityassist-field" data-default-color="#000000" />
                 </p>
 
@@ -42,15 +42,15 @@ function gravityassist_page() {
               <div class="gravityassist-section-box">
                 <h3>Confirmation styles</h3>
                 <p class="gravityassist-flex">
-                  <label for="messageText">Colour messageText</label>
+                  <label for="messageText">Message Text</label>
                   <input type="text" name="messageText" value="<?= get_option( 'messageText' ); ?>" class="gravityassist-field" data-default-color="#000000" />
                 </p>
                 <p class="gravityassist-flex">
-                  <label for="messageBackground">Colour messageBackground</label>
+                  <label for="messageBackground">Message Background</label>
                   <input type="text" name="messageBackground" value="<?= get_option( 'messageBackground' ); ?>" class="gravityassist-field" data-default-color="#000000" />
                 </p>
                 <p class="gravityassist-flex">
-                  <label for="error">Colour error</label>
+                  <label for="error">Error Color</label>
                   <input type="text" name="error" value="<?= get_option( 'error' ); ?>" class="gravityassist-field" data-default-color="#000000" />
                 </p>
               </div>
@@ -68,21 +68,11 @@ function gravityassist_page() {
                   <label for="fontSize">Font Size</label>
                   <input type="number" name="fontSize" value="<?= (get_option( 'fontSize' ) ? get_option( 'fontSize' ) : 13); ?>" />
                 </p>
-              </div>
-              <div class="gravityassist-section-box">
-                <h3>Background styles</h3>
                 <p class="gravityassist-flex">
-                  <label for="inputBackground">Form background</label>
-                  <input type="text" name="inputBackground" value="<?= get_option( 'inputBackground' ); ?>" class="gravityassist-field" data-default-color="#000000" />
-                </p>
-                <p class="gravityassist-flex">
-                  <label for="inputBackground">Input background</label>
-                  <input type="text" name="inputBackground" value="<?= get_option( 'inputBackground' ); ?>" class="gravityassist-field" data-default-color="#000000" />
+                  <label for="placeholder_colour">Placeholder Colour</label>
+                  <input type="text" name="placeholder_colour" value="<?= get_option( 'placeholder_colour' ); ?>" class="gravityassist-field" data-default-color="#000000" />
                 </p>
               </div>
-            </div>
-
-            <div class="gravityassist-flex-row">
               <div class="gravityassist-section-box">
                 <h3>Label positions</h3>
                 <p class="gravityassist-flex">
@@ -98,14 +88,8 @@ function gravityassist_page() {
                   <input type="number" name="translateY" value="<?= (get_option( 'translateY' ) ? get_option( 'translateY' ) : 200); ?>" />
                 </p>
               </div>
-              <div class="gravityassist-section-box">
-                <h3>Placeholder styles</h3>
-                <p class="gravityassist-flex">
-                  <label for="placeholder_colour">Placeholder Colour</label>
-                  <input type="text" name="placeholder_colour" value="<?= get_option( 'placeholder_colour' ); ?>" class="gravityassist-field" data-default-color="#000000" />
-                </p>
-              </div>
             </div>
+
 
 
             <?php submit_button(); ?>
