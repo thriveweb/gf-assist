@@ -142,7 +142,7 @@
   width: 100%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: transparent;
+  background: var(--inputBackground);
   font-size: var(--fontSize);
 }
 
