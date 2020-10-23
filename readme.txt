@@ -1,18 +1,19 @@
 === Gravity Assist ===
-Contributors: hlashbrooke
-Donate link: http://www.hughlashbrooke.com/donate
-Tags: wordpress, plugin, template
-Requires at least: 3.9
-Tested up to: 4.0
+Contributors: Thriveweb - Alex frith
+Tags: wordpress, plugin, gravityforms
+Requires at least: 5.0
+Tested up to: 5.2
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is where you craft a short, punchy description of your plugin
+Gravity Assist add label animations and modern input styles
 
 == Description ==
 
-This is where you can give a much longer description of your plugin that you can use to explain just how it awesome it really is.
+With label animations that support colour changes and placeholders.
+Select/Dropdown style with modern UX design.
+Custom styled Radio & Checkbox with modern UX design and colour options.
 
 == Installation ==
 
@@ -30,18 +31,16 @@ Installing "Gravity Assist" can be done either by searching for "Gravity Assist"
 
 == Frequently Asked Questions ==
 
-= What is the plugin template for? =
+= Do I need gravity from plugin? =
 
-This plugin template is designed to help you get started with any new WordPress plugin.
+This plugin works with gravity forms. You must have a full version for this to work as expected.
+
+= What is the plugin for? =
+
+This plugin is designed to help you use gravity forms style with modern UX design.
 
 == Changelog ==
 
 = 1.0 =
-* 2012-12-13
-* Initial release
-
-== Upgrade Notice ==
-
-= 1.0 =
-* 2012-12-13
+* 2020-10-23
 * Initial release
