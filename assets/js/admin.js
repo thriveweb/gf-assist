@@ -4,8 +4,9 @@
  *  @package WordPress Plugin Template/JS
  */
 
-jQuery( document ).ready(
-	function ( e ) {
-
-	}
-);
+jQuery(function ($) {
+  $(document).ready(function () {
+    // colour picker
+    $(".GL-field").wpColorPicker();
+  });
+});

@@ -2,7 +2,7 @@
 Contributors: Thriveweb - Alex frith
 Tags: wordpress, plugin, gravityforms
 Requires at least: 5.0
-Tested up to: 5.2
+Tested up to: 5.5.1
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,9 +25,10 @@ Installing "Gravity Assist" can be done either by searching for "Gravity Assist"
 
 == Screenshots ==
 
-1. Description of first screenshot named screenshot-1
-2. Description of second screenshot named screenshot-2
-3. Description of third screenshot named screenshot-3
+1. Animated labels for input screenshot-1
+2. Animated labels for textarea screenshot-2
+3. Select/Dropdown style screenshot-3
+4. Custom styled Radio & Checkbox screenshot-4
 
 == Frequently Asked Questions ==
 

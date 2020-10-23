@@ -1,1 +1,288 @@
 /* phpcs:ignore */
+:root {
+  --borderRadius: 4px;
+  --fontSize: 14px;
+
+  --inputBackground: transparent;
+  --midGrey: #555;
+  --primary: black;
+  --hightlight: coral;
+  --error: #ce202f;
+
+  --messageText: #ffffff;
+  --messageBackground: #333;
+}
+
+.gform_heading {
+  margin-bottom: 20px;
+}
+.gform_wrapper > ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.gform_wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gform_wrapper ul li {
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+.gform_wrapper ul li:before {
+  display: none;
+}
+.gform_wrapper ul li label {
+  color: var(--primary);
+}
+.gform_wrapper ul li.GL-text,
+.gform_wrapper ul li.GL-number,
+.gform_wrapper ul li.GL-phone,
+.gform_wrapper ul li.GL-password,
+.gform_wrapper ul li.GL-email,
+.gform_wrapper ul li.GL-textarea {
+  margin-top: 30px;
+}
+
+/* errors */
+.gform_wrapper .validation_error,
+.gform_wrapper .validation_message {
+  background: var(--midGrey);
+  margin: 0 0 30px;
+  color: var(--messageText);
+  padding: 10px 20px;
+  border-left: 3px solid;
+}
+
+.gform_wrapper .validation_message {
+  display: none;
+  padding: 5px 20px;
+}
+
+.gform_wrapper .gfield_error input,
+.gform_wrapper .gfield_error select,
+.gform_wrapper .gfield_error textarea {
+  border-color: var(--error);
+  background: var(--error);
+}
+
+.GL-text .gfield_label,
+.GL-number .gfield_label,
+.GL-phone .gfield_label,
+.GL-password .gfield_label,
+.GL-email .gfield_label,
+.GL-textarea .gfield_label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+
+  z-index: 10;
+  transition: all 0.3s ease-out;
+}
+
+.gfield.focused .gfield_label {
+  transform: translateY(-200%);
+  font-size: var(--fontSize);
+}
+
+.gfield input,
+.gfield textarea {
+  padding: 10px;
+  border: none;
+  height: auto;
+}
+
+.gfield textarea {
+  min-height: 100px;
+}
+
+.GL-text input[type="text"],
+.GL-password input[type="password"],
+.GL-email input[type="email"],
+.GL-url input[type="url"],
+.GL-date input[type="date"],
+.GL-month input[type="month"],
+.GL-time input[type="time"],
+.GL-datetime input[type="datetime"],
+.GL-datetime input[type="datetime-local"],
+.GL-week input[type="week"],
+.GL-number input[type="number"],
+.GL-search input[type="search"],
+.GL-tel input[type="tel"],
+.GL-color input[type="color"],
+.GL-textarea textarea,
+.GL-select select {
+  font-family: inherit;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  border: 1px solid var(--midGrey);
+  padding: 15px 20px;
+  line-height: 1.4;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+  resize: none;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: transparent;
+  font-size: var(--fontSize);
+}
+
+/* Select */
+
+.GL-select select {
+  background: none;
+  appearance: none;
+  font-size: var(--fontSize);
+}
+
+.ginput_container_select {
+  position: relative;
+}
+.GL-select:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 55%;
+  border-right: 1px solid var(--midGrey);
+  border-bottom: 1px solid var(--midGrey);
+  height: 10px;
+  width: 10px;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+/* Radio Checkboxes buttons */
+
+.GL-radio ul li {
+  display: inline-block;
+  width: auto;
+}
+
+.GL-radio.GL-radio ul li:not(:first-of-type) {
+  margin-left: 10px;
+}
+
+.GL-radio ul li {
+  border: 1px solid var(--midGrey);
+  overflow: hidden;
+  border-radius: var(--borderRadius);
+}
+
+.GL-radio ul label,
+.GL-checkbox ul label {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: inline-block;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 10px;
+  border-left: 25px solid transparent;
+  border-radius: var(--borderRadius);
+}
+
+.GL-radio li input,
+.GL-checkbox li input {
+  display: none;
+}
+
+.GL-radio li input + label::before,
+.GL-checkbox li input + label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--midGrey);
+  border-radius: var(--borderRadius);
+}
+
+.GL-radio li input:checked + label::before,
+.GL-checkbox li input:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--hightlight);
+}
+
+.GL-radio li input + label::after,
+.GL-checkbox li input + label::after {
+  transform: scale(0.5);
+  transition: 0.3s ease all;
+  content: "\2713";
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: -17px;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+}
+
+.GL-radio Input:checked + label::after,
+.GL-checkbox li input:checked + label::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Placeholders */
+
+.gfield ::-webkit-input-placeholder {
+  color: transparent;
+  transition: all 0.3s ease;
+}
+.gfield ::-ms-input-placeholder {
+  color: transparent;
+  transition: all 0.3s ease;
+}
+.gfield ::placeholder {
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Messages */
+
+.gform_confirmation_message {
+  background: var(--messageBackground);
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
+  border-bottom: 1px solid var(--messageBackground);
+  height: auto;
+  color: var(--messageText);
+  position: relative;
+}
+
+.gform_confirmation_message:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 26px solid transparent;
+  border-top-color: var(--messageBackground);
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -13px;
+  margin-bottom: -26px;
+}
