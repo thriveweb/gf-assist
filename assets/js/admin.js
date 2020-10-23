@@ -7,6 +7,6 @@
 jQuery(function ($) {
   $(document).ready(function () {
     // colour picker
-    $(".GL-field").wpColorPicker();
+    $(".gravityassist-field").wpColorPicker();
   });
 });

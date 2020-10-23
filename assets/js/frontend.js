@@ -5,15 +5,35 @@
  */
 
 jQuery(function ($) {
+  const targets =
+    "li.gravityassist-text input,\
+   li.gravityassist-address input,\
+   li.gravityassist-name input,\
+   li.gravityassist-date input,\
+   li.gravityassist-website input,\
+   li.gravityassist-number input,\
+   li.gravityassist-phone input,\
+   li.gravityassist-password input,\
+   li.gravityassist-email input,\
+   li.gravityassist-textarea textarea";
+  //
+  // '.gfield input[type="text"],\
+  // .gfield input[type="url"],\
+  // .gfield input[type="tel"],\
+  // .gfield input[type="number"],\
+  // .gfield input[type="phone"],\
+  // .gfield input[type="password"],\
+  // .gfield input[type="email"],\
+  // .gfield textarea';
+
   $(window).load(function () {
     console.log("load");
     // checking form inputs for values
-    const inputEl = document.querySelectorAll(
-      '.gfield input[type="text"], .gfield input[type="url"], .gfield input[type="number"], .gfield input[type="phone"], .gfield input[type="password"], .gfield input[type="email"], .gfield textarea'
-    );
+    const inputEl = document.querySelectorAll(targets);
     inputEl.forEach((inputEl) => {
       let inputValue = $(inputEl).val();
-      if (inputValue == "") {
+      console.log(inputValue);
+      if (inputValue.length < 0) {
         $(inputEl).removeClass("filled");
         $(inputEl).parents(".gfield").removeClass("focused");
       } else {
@@ -25,14 +45,10 @@ jQuery(function ($) {
   $(document).ready(function () {
     console.log("ready");
     // gravity form label focus
-    $(
-      '.gfield input[type="text"], .gfield input[type="url"], .gfield input[type="number"], .gfield input[type="phone"], .gfield input[type="password"], .gfield input[type="email"], .gfield textarea'
-    ).focus(function () {
+    $(targets).focus(function () {
       $(this).parents(".gfield").addClass("focused");
     });
-    $(
-      '.gfield input[type="text"], .gfield input[type="url"], .gfield input[type="number"], .gfield input[type="phone"], .gfield input[type="password"], .gfield input[type="email"], .gfield textarea'
-    ).blur(function () {
+    $(targets).blur(function () {
       var inputValue = $(this).val();
       if (inputValue == "") {
         $(this).removeClass("filled");

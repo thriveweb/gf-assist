@@ -1,14 +1,28 @@
 /* phpcs:ignore */
-.GL-admin .GL-pod {
-  width: 350px;
+.gravityassist-admin .gravityassist-pod {
+  width: 800px;
 }
-.GL-admin .GL-flex {
+.gravityassist-admin .gravityassist-flex {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.GL-admin input[type="number"] {
-  max-width: 120px;
+.gravityassist-admin input[type="number"] {
+  max-width: 115px;
+}
+
+.gravityassist-flex-row {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin: 0 0 40px 0;
+}
+
+.gravityassist-section-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: calc(50% - 60px);
+  padding: 20px;
+  border-radius: 10px;
 }

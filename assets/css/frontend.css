@@ -11,11 +11,20 @@
 
   --messageText: #ffffff;
   --messageBackground: #333;
+  --left: 10px;
+  --top: 10px;
 }
 
-.gform_heading {
+.gform_heading,
+.gform_body,
+.gform_footer {
   margin-bottom: 20px;
 }
+
+.gform_heading h3.gform_title {
+  margin: 0;
+}
+
 .gform_wrapper > ul {
   display: flex;
   align-items: stretch;
@@ -38,48 +47,41 @@
 }
 .gform_wrapper ul li label {
   color: var(--primary);
+  font-size: var(--fontSize);
 }
-.gform_wrapper ul li.GL-text,
-.gform_wrapper ul li.GL-number,
-.gform_wrapper ul li.GL-phone,
-.gform_wrapper ul li.GL-password,
-.gform_wrapper ul li.GL-email,
-.gform_wrapper ul li.GL-textarea {
+
+.ginput_complex span label {
+  position: relative;
+  font-size: 10px;
+  left: var(--left);
+}
+
+.gform_wrapper ul li.gravityassist-text,
+.gform_wrapper ul li.gravityassist-address,
+.gform_wrapper ul li.gravityassist-name,
+.gform_wrapper ul li.gravityassist-date,
+.gform_wrapper ul li.gravityassist-website,
+.gform_wrapper ul li.gravityassist-number,
+.gform_wrapper ul li.gravityassist-phone,
+.gform_wrapper ul li.gravityassist-password,
+.gform_wrapper ul li.gravityassist-email,
+.gform_wrapper ul li.gravityassist-textarea {
   margin-top: 30px;
 }
 
-/* errors */
-.gform_wrapper .validation_error,
-.gform_wrapper .validation_message {
-  background: var(--midGrey);
-  margin: 0 0 30px;
-  color: var(--messageText);
-  padding: 10px 20px;
-  border-left: 3px solid;
-}
-
-.gform_wrapper .validation_message {
-  display: none;
-  padding: 5px 20px;
-}
-
-.gform_wrapper .gfield_error input,
-.gform_wrapper .gfield_error select,
-.gform_wrapper .gfield_error textarea {
-  border-color: var(--error);
-  background: var(--error);
-}
-
-.GL-text .gfield_label,
-.GL-number .gfield_label,
-.GL-phone .gfield_label,
-.GL-password .gfield_label,
-.GL-email .gfield_label,
-.GL-textarea .gfield_label {
+.gravityassist-text .gfield_label,
+.gravityassist-address .gfield_label,
+.gravityassist-name .gfield_label,
+.gravityassist-date .gfield_label,
+.gravityassist-website .gfield_label,
+.gravityassist-number .gfield_label,
+.gravityassist-phone .gfield_label,
+.gravityassist-password .gfield_label,
+.gravityassist-email .gfield_label,
+.gravityassist-textarea .gfield_label {
   position: absolute;
-  left: 10px;
-  top: 10px;
-
+  left: var(--left);
+  top: var(--top);
   z-index: 10;
   transition: all 0.3s ease-out;
 }
@@ -100,22 +102,29 @@
   min-height: 100px;
 }
 
-.GL-text input[type="text"],
-.GL-password input[type="password"],
-.GL-email input[type="email"],
-.GL-url input[type="url"],
-.GL-date input[type="date"],
-.GL-month input[type="month"],
-.GL-time input[type="time"],
-.GL-datetime input[type="datetime"],
-.GL-datetime input[type="datetime-local"],
-.GL-week input[type="week"],
-.GL-number input[type="number"],
-.GL-search input[type="search"],
-.GL-tel input[type="tel"],
-.GL-color input[type="color"],
-.GL-textarea textarea,
-.GL-select select {
+.gform_wrapper input[type="text"],
+.gform_wrapper input[type="number"],
+.gravityassist-text input[type="text"],
+.gravityassist-phone input[type="tel"],
+.gravityassist-website input[type="url"],
+.gravityassist-password input[type="password"],
+.gravityassist-email input[type="email"],
+.gravityassist-url input[type="url"],
+.gravityassist-date input[type="date"],
+.gravityassist-month input[type="month"],
+.gravityassist-time input[type="time"],
+.gravityassist-datetime input[type="datetime"],
+.gravityassist-datetime input[type="datetime-local"],
+.gravityassist-week input[type="week"],
+.gravityassist-number input[type="number"],
+.gravityassist-search input[type="search"],
+.gravityassist-tel input[type="tel"],
+.gravityassist-color input[type="color"],
+.gravityassist-textarea textarea,
+.gravityassist-select select,
+.gravityassist-address select,
+.gravityassist-multiselect select,
+.gravityassist-time select {
   font-family: inherit;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -137,9 +146,31 @@
   font-size: var(--fontSize);
 }
 
+/* Gravity forms advance */
+
+.gravityassist-time .clear-multi {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.gravityassist-time .clear-multi i {
+  display: none;
+}
+.gravityassist-time .clear-multi label {
+  display: inline;
+  font-size: 10px;
+  line-height: 1;
+  height: 12px;
+  margin: 0;
+}
+
+.ginput_container_time {
+  margin: 0 0 0 10px;
+}
+
 /* Select */
 
-.GL-select select {
+.gravityassist-select select {
   background: none;
   appearance: none;
   font-size: var(--fontSize);
@@ -148,7 +179,8 @@
 .ginput_container_select {
   position: relative;
 }
-.GL-select:after {
+.gravityassist-select:after,
+.gravityassist-time:after {
   content: "";
   position: absolute;
   right: 25px;
@@ -163,23 +195,23 @@
 
 /* Radio Checkboxes buttons */
 
-.GL-radio ul li {
+.gravityassist-radio ul li {
   display: inline-block;
   width: auto;
 }
 
-.GL-radio.GL-radio ul li:not(:first-of-type) {
+.gravityassist-radio.gravityassist-radio ul li:not(:first-of-type) {
   margin-left: 10px;
 }
 
-.GL-radio ul li {
+.gravityassist-radio ul li {
   border: 1px solid var(--midGrey);
   overflow: hidden;
   border-radius: var(--borderRadius);
 }
 
-.GL-radio ul label,
-.GL-checkbox ul label {
+.gravityassist-radio ul label,
+.gravityassist-checkbox ul label {
   position: relative;
   top: auto;
   left: auto;
@@ -192,13 +224,13 @@
   border-radius: var(--borderRadius);
 }
 
-.GL-radio li input,
-.GL-checkbox li input {
+.gravityassist-radio li input,
+.gravityassist-checkbox li input {
   display: none;
 }
 
-.GL-radio li input + label::before,
-.GL-checkbox li input + label::before {
+.gravityassist-radio li input + label::before,
+.gravityassist-checkbox li input + label::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -211,8 +243,8 @@
   border-radius: var(--borderRadius);
 }
 
-.GL-radio li input:checked + label::before,
-.GL-checkbox li input:checked + label::before {
+.gravityassist-radio li input:checked + label::before,
+.gravityassist-checkbox li input:checked + label::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -224,8 +256,8 @@
   background: var(--hightlight);
 }
 
-.GL-radio li input + label::after,
-.GL-checkbox li input + label::after {
+.gravityassist-radio li input + label::after,
+.gravityassist-checkbox li input + label::after {
   transform: scale(0.5);
   transition: 0.3s ease all;
   content: "\2713";
@@ -238,8 +270,8 @@
   opacity: 0;
 }
 
-.GL-radio Input:checked + label::after,
-.GL-checkbox li input:checked + label::after {
+.gravityassist-radio Input:checked + label::after,
+.gravityassist-checkbox li input:checked + label::after {
   opacity: 1;
   transform: scale(1);
 }
@@ -286,3 +318,35 @@
   margin-left: -13px;
   margin-bottom: -26px;
 }
+
+/* errors */
+.gform_wrapper .validation_error,
+.gform_wrapper .validation_message {
+  background: var(--midGrey);
+  margin-bottom: 40px;
+  color: var(--messageText);
+  padding: 10px 20px;
+  border-left: 3px solid;
+}
+
+.gform_wrapper .validation_message {
+  display: none;
+  padding: 5px 20px;
+}
+
+.gform_wrapper .gfield_error input,
+.gform_wrapper .gfield_error select,
+.gform_wrapper .gfield_error textarea {
+  border-color: var(--error);
+}
+
+.gform_wrapper .gfield_error.gravityassist-radio li input + label::before,
+.gform_wrapper .gfield_error.gravityassist-checkbox li input + label::before {
+  background: var(--error);
+}
+
+/* not
+gravityassist-time
+
+
+*/
