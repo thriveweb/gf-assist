@@ -1,4 +1,4 @@
-=== Gravity Assist ===
+=== Assist for Gravity Forms ===
 Contributors: Thriveweb - Alex frith
 Tags: wordpress, plugin, gravityforms
 Requires at least: 5.0
@@ -7,7 +7,7 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Gravity Assist add label animations and modern input styles
+Assist for Gravity Forms adds label animations and modern input styles for select, radio and checkbox input types.
 
 == Description ==
 
@@ -17,7 +17,7 @@ Custom styled Radio & Checkbox with modern UX design and colour options.
 
 == Installation ==
 
-Installing "Gravity Assist" can be done either by searching for "Gravity Assist" via the "Plugins > Add New" screen in your WordPress dashboard, or by using the following steps:
+Installing "Assist for Gravity Forms" can be done either by searching for "Assist for Gravity Forms" via the "Plugins > Add New" screen in your WordPress dashboard, or by using the following steps:
 
 1. Download the plugin via WordPress.org
 1. Upload the ZIP file through the 'Plugins > Add New > Upload' screen in your WordPress dashboard

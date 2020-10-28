@@ -1,8 +1,8 @@
-# Copyright (C) 2020 Gravity Assist
-# This file is distributed under the same license as the Gravity Assist package.
+# Copyright (C) 2020 Assist for Gravity Forms
+# This file is distributed under the same license as the Assist for Gravity Forms package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Gravity Assist 1.0\n"
+"Project-Id-Version: Assist for Gravity Forms 1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/WordPress-Plugin-Template\n"
 "POT-Creation-Date: 2020-10-23 11:28:06+00:00\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 #. Plugin Name of the plugin/theme
-msgid "Gravity Assist"
+msgid "Assist for Gravity Forms"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

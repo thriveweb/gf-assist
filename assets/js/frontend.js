@@ -6,16 +6,16 @@
 
 jQuery(function ($) {
   const targets =
-    "li.gravityassist-text input,\
-   li.gravityassist-address input,\
-   li.gravityassist-name input,\
-   li.gravityassist-date input,\
-   li.gravityassist-website input,\
-   li.gravityassist-number input,\
-   li.gravityassist-phone input,\
-   li.gravityassist-password input,\
-   li.gravityassist-email input,\
-   li.gravityassist-textarea textarea";
+    "li.gfassist-text input,\
+   li.gfassist-address input,\
+   li.gfassist-name input,\
+   li.gfassist-date input,\
+   li.gfassist-website input,\
+   li.gfassist-number input,\
+   li.gfassist-phone input,\
+   li.gfassist-password input,\
+   li.gfassist-email input,\
+   li.gfassist-textarea textarea";
   //
   // '.gfield input[type="text"],\
   // .gfield input[type="url"],\

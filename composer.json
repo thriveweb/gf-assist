@@ -1,14 +1,14 @@
 {
-  "name": "thriveweb/gravityassist",
+  "name": "thriveweb/gfassist",
   "license": "GPL-2.0-or-later",
-  "description": "Gravity Assist add label animations and modern input styles.",
+  "description": "Assist for Gravity Forms add label animations and modern input styles.",
   "keywords": [
     "wordpress",
     "wp",
     "gravityforms"
   ],
   "support": {
-    "issues": "https://github.com/thriveweb/gravityassist"
+    "issues": "https://github.com/thriveweb/gfassist"
   },
   "require": {
     "php": ">=7.0",

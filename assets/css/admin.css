@@ -1,28 +1,74 @@
 /* phpcs:ignore */
-.gravityassist-admin .gravityassist-pod {
-  width: 800px;
+.gfassist-admin h1 {
+  margin: 20px 0;
 }
-.gravityassist-admin .gravityassist-flex {
+.gfassist-mainsplit {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.gfassist-relative {
+  position: relative;
+}
+
+.gfassist-logo {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.gfassist-logo img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.gfassist-info-pod {
+  width: calc(30% - 80px);
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.gfassist-admin .gfassist-pod {
+  width: calc(70% - 40px);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 20px 0 20px;
+  border-radius: 10px;
+}
+.gfassist-admin .gfassist-flex {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.gravityassist-admin input[type="number"] {
+.gfassist-admin input[type="number"] {
   max-width: 115px;
 }
 
-.gravityassist-flex-row {
+.gfassist-flex-row {
   display: flex;
   justify-content: space-between;
   text-align: left;
   margin: 0 0 40px 0;
+  flex-wrap: wrap;
 }
 
-.gravityassist-section-box {
+.gfassist-section-box {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: calc(50% - 60px);
   padding: 20px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .gfassist-info-pod,
+  .gfassist-section-box {
+    width: calc(100% - 60px);
+  }
+  .gfassist-admin .gfassist-pod {
+    width: 100%;
+  }
 }
