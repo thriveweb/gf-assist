@@ -25,10 +25,9 @@ Installing "Assist for Gravity Forms" can be done either by searching for "Assis
 
 == Screenshots ==
 
-1. Animated labels for input screenshot-1
-2. Animated labels for textarea screenshot-2
-3. Select/Dropdown style screenshot-3
-4. Custom styled Radio & Checkbox screenshot-4
+1. Admin Screen
+2. Select/Dropdown, Radio & Checkbox & Animated labels for input
+
 
 == Frequently Asked Questions ==
 
