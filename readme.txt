@@ -42,5 +42,5 @@ This plugin is designed to help you use gravity forms style with modern UX desig
 == Changelog ==
 
 = 1.0 =
-* 2020-10-23
+* 2020-10-28
 * Initial release
