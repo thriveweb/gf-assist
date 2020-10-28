@@ -16,16 +16,6 @@ jQuery(function ($) {
    li.ui_elements-password input,\
    li.ui_elements-email input,\
    li.ui_elements-textarea textarea";
-  //
-  // '.gfield input[type="text"],\
-  // .gfield input[type="url"],\
-  // .gfield input[type="tel"],\
-  // .gfield input[type="number"],\
-  // .gfield input[type="phone"],\
-  // .gfield input[type="password"],\
-  // .gfield input[type="email"],\
-  // .gfield textarea';
-
   $(window).load(function () {
     console.log("load");
     // checking form inputs for values

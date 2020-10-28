@@ -378,9 +378,3 @@
 .gform_wrapper .gfield_error.ui_elements-checkbox li input + label::before {
   background: var(--error);
 }
-
-/* not
-ui_elements-time
-
-
-*/
