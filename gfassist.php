@@ -78,9 +78,19 @@ class GFassist {
 		register_activation_hook( __FILE__, array( $this, 'activation' ) );
 		register_deactivation_hook( __FILE__, array( $this, 'deactivation' ) );
 
+		function my_plugin_settings( $settings ) {
+			 $settings[] = '<a href="'. get_admin_url(null, 'admin.php?page=gfassist_page') .'">Settings</a>';
+			 // correct order
+			 return array_reverse($settings);
+		}
+		add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'my_plugin_settings' );
+
 		// Run the plugin.
 		$this->run_plugin();
 	}
+
+
+
 
 	public function get_plugin_url() {
 		return $this->plugin_url;
