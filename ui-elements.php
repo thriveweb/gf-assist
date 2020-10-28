@@ -3,13 +3,13 @@
 * Plugin Name: UI Elements
 * Version: 1.0.0
 * Plugin URI: https://thriveweb.com.au/the-lab/
-* Description: Adds label animations and modern input styles for select, radio and checkbox input types. With label animations that support colour changes and placeholders. Select/Dropdown style with modern UX design. Custom styled Radio & Checkbox with modern UX design and colour options.
+* Description: Now your Gravity Forms will have label animations and modern input styles for select, radio and checkboxes, and input types. With labels * placeholders that support colour options. Select/Dropdown styled with modern Ui design. Custom styled Radio and Checkbox with modern Ui design and highlight colour options.
 * Author: Thriveweb - Alex Frith
 * Author URI: https://thriveweb.com.au/
 * Requires at least: 5.0
 * Tested up to: 5.5.1
 *
-* Text Domain: ui_elements
+* Text Domain: ui-elements
 * Domain Path: /lang/
 *
 * @package WordPress
@@ -27,7 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 * @since  1.0.0
 * @return object Ui_elements
 */
-
 
 class Ui_elements {
 	private static $instance = null;
@@ -61,7 +60,7 @@ class Ui_elements {
 
 		// includes
 		require_once(ABSPATH.'wp-includes/pluggable.php');
-		include(ui_elements_PATH.'includes/ui_elements-settings.php');
+		include(ui_elements_PATH.'includes/ui-elements-settings.php');
 
 		load_plugin_textdomain( $this->text_domain, false, $this->plugin_path . '\lang' );
 
@@ -80,18 +79,15 @@ class Ui_elements {
 
 		// add settings to plugin screen
 		function my_plugin_settings( $settings ) {
-			 $settings[] = '<a href="'. get_admin_url(null, 'admin.php?page=ui_elements_page') .'">Settings</a>';
-			 // correct order
-			 return array_reverse($settings);
+			$settings[] = '<a href="'. get_admin_url(null, 'admin.php?page=ui_elements_page') .'">Settings</a>';
+			// correct order
+			return array_reverse($settings);
 		}
 		add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'my_plugin_settings' );
 
 		// Run the plugin.
 		$this->run_plugin();
 	}
-
-
-
 
 	public function get_plugin_url() {
 		return $this->plugin_url;
@@ -104,11 +100,9 @@ class Ui_elements {
 	/**
 	* Place code that runs at plugin activation here.
 	*/
-
 	public function activation() {
 
 	}
-
 
 	/**
 	* Place code that runs at plugin deactivation here.
@@ -167,7 +161,6 @@ class Ui_elements {
 		);
 
 		// Get options for custom style
-
 		$borderRadius = get_option('borderRadius');
 		$fontSize = get_option('fontSize');
 		$messageText = get_option('messageText');
@@ -177,10 +170,6 @@ class Ui_elements {
 		$hightlight = get_option('hightlight');
 		$midGrey = get_option('midGrey');
 		$error = get_option('error');
-		// $inputBackground = get_option('inputBackground');
-		// $inputColour = get_option('inputColour');
-		// --inputBackground: {$inputBackground};
-		// --inputColour: {$inputColour};
 
 		$label_top = get_option( 'label_top' );
 		$label_left = get_option( 'label_left' );
@@ -221,15 +210,15 @@ class Ui_elements {
 	}
 
 	public function ui_elements_dequeue() {
-		wp_dequeue_style( 'gforms_reset_css' ); // style id
-		wp_dequeue_style( 'gforms_formsmain_css' ); // style id
-		wp_dequeue_style( 'gforms_ready_class_css' ); // style id
-		wp_dequeue_style( 'gforms_browsers_css' ); // style id
+		wp_dequeue_style( 'gforms_reset_css' );
+		wp_dequeue_style( 'gforms_formsmain_css' );
+		wp_dequeue_style( 'gforms_ready_class_css' );
+		wp_dequeue_style( 'gforms_browsers_css' );
 
-		wp_deregister_style( 'gforms_reset_css' ); // style id
-		wp_deregister_style( 'gforms_formsmain_css' ); // style id
-		wp_deregister_style( 'gforms_ready_class_css' ); // style id
-		wp_deregister_style( 'gforms_browsers_css' ); // style id
+		wp_deregister_style( 'gforms_reset_css' );
+		wp_deregister_style( 'gforms_formsmain_css' );
+		wp_deregister_style( 'gforms_ready_class_css' );
+		wp_deregister_style( 'gforms_browsers_css' );
 	}
 
 	/**
@@ -262,8 +251,6 @@ class Ui_elements {
 			register_setting( 'ui_elements-options-group', 'label_left' );
 			register_setting( 'ui_elements-options-group', 'placeholder_colour' );
 			register_setting( 'ui_elements-options-group', 'translateY' );
-			// register_setting( 'ui_elements-options-group', 'inputBackground');
-			// register_setting( 'ui_elements-options-group', 'inputColour');
 		}
 		// Add type to li elements
 		add_filter( 'gform_field_css_class', 'custom_class', 10, 3 );

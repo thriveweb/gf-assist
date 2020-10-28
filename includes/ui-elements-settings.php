@@ -102,7 +102,6 @@ function ui_elements_page() {
         <div class="ui_elements-info-pod">
           <h3>Check out your forms!</h3>
           <p>You now have label animations and modern input styles for select, radio and checkbox input types.</p>
-          <p>If you have any issues leave them on <a target="_blank" rel="noreferrer" href="https://github.com/thriveweb/ui_elements">Github</a></p>
           <p><a id="ui_elements-show_demo" href="#sample">Show Demo</a></p>
           <div id="samples">
             <img src="<?= plugins_url() . '/ui-elements/assets/images/text.gif'; ?>" alt="text sample">
