@@ -6,16 +6,16 @@
 
 jQuery(function ($) {
   const targets =
-    "li.gfassist-text input,\
-   li.gfassist-address input,\
-   li.gfassist-name input,\
-   li.gfassist-date input,\
-   li.gfassist-website input,\
-   li.gfassist-number input,\
-   li.gfassist-phone input,\
-   li.gfassist-password input,\
-   li.gfassist-email input,\
-   li.gfassist-textarea textarea";
+    "li.ui_elements-text input,\
+   li.ui_elements-address input,\
+   li.ui_elements-name input,\
+   li.ui_elements-date input,\
+   li.ui_elements-website input,\
+   li.ui_elements-number input,\
+   li.ui_elements-phone input,\
+   li.ui_elements-password input,\
+   li.ui_elements-email input,\
+   li.ui_elements-textarea textarea";
   //
   // '.gfield input[type="text"],\
   // .gfield input[type="url"],\

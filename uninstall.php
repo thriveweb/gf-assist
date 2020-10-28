@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file runs when the plugin in uninstalled (deleted).
  * This will not run when the plugin is deactivated.

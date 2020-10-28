@@ -66,29 +66,29 @@
   left: var(--left);
 }
 
-.gform_wrapper ul li.gfassist-text,
-.gform_wrapper ul li.gfassist-address,
-.gform_wrapper ul li.gfassist-name,
-.gform_wrapper ul li.gfassist-date,
-.gform_wrapper ul li.gfassist-website,
-.gform_wrapper ul li.gfassist-number,
-.gform_wrapper ul li.gfassist-phone,
-.gform_wrapper ul li.gfassist-password,
-.gform_wrapper ul li.gfassist-email,
-.gform_wrapper ul li.gfassist-textarea {
+.gform_wrapper ul li.ui_elements-text,
+.gform_wrapper ul li.ui_elements-address,
+.gform_wrapper ul li.ui_elements-name,
+.gform_wrapper ul li.ui_elements-date,
+.gform_wrapper ul li.ui_elements-website,
+.gform_wrapper ul li.ui_elements-number,
+.gform_wrapper ul li.ui_elements-phone,
+.gform_wrapper ul li.ui_elements-password,
+.gform_wrapper ul li.ui_elements-email,
+.gform_wrapper ul li.ui_elements-textarea {
   margin-top: 40px;
 }
 
-.gfassist-text .gfield_label,
-.gfassist-address .gfield_label,
-.gfassist-name .gfield_label,
-.gfassist-date .gfield_label,
-.gfassist-website .gfield_label,
-.gfassist-number .gfield_label,
-.gfassist-phone .gfield_label,
-.gfassist-password .gfield_label,
-.gfassist-email .gfield_label,
-.gfassist-textarea .gfield_label {
+.ui_elements-text .gfield_label,
+.ui_elements-address .gfield_label,
+.ui_elements-name .gfield_label,
+.ui_elements-date .gfield_label,
+.ui_elements-website .gfield_label,
+.ui_elements-number .gfield_label,
+.ui_elements-phone .gfield_label,
+.ui_elements-password .gfield_label,
+.ui_elements-email .gfield_label,
+.ui_elements-textarea .gfield_label {
   position: absolute;
   left: var(--left);
   top: var(--top);
@@ -115,27 +115,27 @@
 .gform_wrapper input[type="text"],
 .gform_wrapper input[type="number"],
 .gform_wrapper input[type="email"],
-.gfassist-text input[type="text"],
-.gfassist-phone input[type="tel"],
-.gfassist-website input[type="url"],
-.gfassist-password input[type="password"],
-.gfassist-email input[type="email"],
-.gfassist-url input[type="url"],
-.gfassist-date input[type="date"],
-.gfassist-month input[type="month"],
-.gfassist-time input[type="time"],
-.gfassist-datetime input[type="datetime"],
-.gfassist-datetime input[type="datetime-local"],
-.gfassist-week input[type="week"],
-.gfassist-number input[type="number"],
-.gfassist-search input[type="search"],
-.gfassist-tel input[type="tel"],
-.gfassist-color input[type="color"],
-.gfassist-textarea textarea,
-.gfassist-select select,
-.gfassist-address select,
-.gfassist-multiselect select,
-.gfassist-time select {
+.ui_elements-text input[type="text"],
+.ui_elements-phone input[type="tel"],
+.ui_elements-website input[type="url"],
+.ui_elements-password input[type="password"],
+.ui_elements-email input[type="email"],
+.ui_elements-url input[type="url"],
+.ui_elements-date input[type="date"],
+.ui_elements-month input[type="month"],
+.ui_elements-time input[type="time"],
+.ui_elements-datetime input[type="datetime"],
+.ui_elements-datetime input[type="datetime-local"],
+.ui_elements-week input[type="week"],
+.ui_elements-number input[type="number"],
+.ui_elements-search input[type="search"],
+.ui_elements-tel input[type="tel"],
+.ui_elements-color input[type="color"],
+.ui_elements-textarea textarea,
+.ui_elements-select select,
+.ui_elements-address select,
+.ui_elements-multiselect select,
+.ui_elements-time select {
   font-family: inherit;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -161,15 +161,15 @@
 
 /* Gravity forms advance */
 
-.gfassist-time .clear-multi {
+.ui_elements-time .clear-multi {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
 }
-.gfassist-time .clear-multi i {
+.ui_elements-time .clear-multi i {
   display: none;
 }
-.gfassist-time .clear-multi label {
+.ui_elements-time .clear-multi label {
   display: inline;
   font-size: 10px;
   line-height: 1;
@@ -184,22 +184,22 @@
 /* Select */
 
 .ginput_container_select,
-.gfassist-address .address_country,
-.gfassist-time .ginput_container_time:last-child {
+.ui_elements-address .address_country,
+.ui_elements-time .ginput_container_time:last-child {
   position: relative;
   display: block;
 }
 .ginput_container_select select,
-.gfassist-address .address_country select,
-.gfassist-time .ginput_container_time:last-child select {
+.ui_elements-address .address_country select,
+.ui_elements-time .ginput_container_time:last-child select {
   background: var(--inputBackground);
   appearance: none;
   font-size: var(--fontSize);
 }
 
-.gfassist-address .address_country:after,
-.gfassist-time .ginput_container_time:last-child:after,
-.gfassist-select:after {
+.ui_elements-address .address_country:after,
+.ui_elements-time .ginput_container_time:last-child:after,
+.ui_elements-select:after {
   content: "";
   position: absolute;
   right: 25px;
@@ -211,41 +211,41 @@
   transform: rotate(45deg);
   pointer-events: none;
 }
-.gfassist-address .address_country:after {
+.ui_elements-address .address_country:after {
   position: absolute;
   right: 25px;
   top: 18px;
 }
-.gfassist-time .ginput_container_time input {
+.ui_elements-time .ginput_container_time input {
   padding: 15px 0 15px 20px;
 }
-.gfassist-time .ginput_container_time:last-child select {
+.ui_elements-time .ginput_container_time:last-child select {
   padding: 15px 40px 15px 20px;
 }
-.gfassist-time .ginput_container_time:last-child:after {
+.ui_elements-time .ginput_container_time:last-child:after {
   position: absolute;
   right: 20px;
   top: 18px;
 }
 /* Radio Checkboxes buttons */
 
-.gfassist-radio ul li {
+.ui_elements-radio ul li {
   display: inline-block;
   width: auto;
 }
 
-.gfassist-radio.gfassist-radio ul li:not(:first-of-type) {
+.ui_elements-radio.ui_elements-radio ul li:not(:first-of-type) {
   margin-left: 10px;
 }
 
-.gfassist-radio ul li {
+.ui_elements-radio ul li {
   border: 1px solid var(--midGrey);
   overflow: hidden;
   border-radius: var(--borderRadius);
 }
 
-.gfassist-radio ul label,
-.gfassist-checkbox ul label {
+.ui_elements-radio ul label,
+.ui_elements-checkbox ul label {
   position: relative;
   top: auto;
   left: auto;
@@ -258,13 +258,13 @@
   border-radius: var(--borderRadius);
 }
 
-.gfassist-radio li input,
-.gfassist-checkbox li input {
+.ui_elements-radio li input,
+.ui_elements-checkbox li input {
   display: none;
 }
 
-.gfassist-radio li input + label::before,
-.gfassist-checkbox li input + label::before {
+.ui_elements-radio li input + label::before,
+.ui_elements-checkbox li input + label::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -277,8 +277,8 @@
   border-radius: var(--borderRadius);
 }
 
-.gfassist-radio li input:checked + label::before,
-.gfassist-checkbox li input:checked + label::before {
+.ui_elements-radio li input:checked + label::before,
+.ui_elements-checkbox li input:checked + label::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -290,8 +290,8 @@
   background: var(--hightlight);
 }
 
-.gfassist-radio li input + label::after,
-.gfassist-checkbox li input + label::after {
+.ui_elements-radio li input + label::after,
+.ui_elements-checkbox li input + label::after {
   transform: scale(0.5);
   transition: 0.3s ease all;
   content: "\2713";
@@ -304,8 +304,8 @@
   opacity: 0;
 }
 
-.gfassist-radio Input:checked + label::after,
-.gfassist-checkbox li input:checked + label::after {
+.ui_elements-radio Input:checked + label::after,
+.ui_elements-checkbox li input:checked + label::after {
   opacity: 1;
   transform: scale(1);
 }
@@ -374,13 +374,13 @@
   border-color: var(--error);
 }
 
-.gform_wrapper .gfield_error.gfassist-radio li input + label::before,
-.gform_wrapper .gfield_error.gfassist-checkbox li input + label::before {
+.gform_wrapper .gfield_error.ui_elements-radio li input + label::before,
+.gform_wrapper .gfield_error.ui_elements-checkbox li input + label::before {
   background: var(--error);
 }
 
 /* not
-gfassist-time
+ui_elements-time
 
 
 */

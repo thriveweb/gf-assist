@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: Assist for Gravity Forms
+* Plugin Name: UI Elements
 * Version: 1.0.0
 * Plugin URI: https://thriveweb.com.au/the-lab/
 * Description: Adds label animations and modern input styles for select, radio and checkbox input types. With label animations that support colour changes and placeholders. Select/Dropdown style with modern UX design. Custom styled Radio & Checkbox with modern UX design and colour options.
@@ -9,7 +9,7 @@
 * Requires at least: 5.0
 * Tested up to: 5.5.1
 *
-* Text Domain: gfassist
+* Text Domain: ui_elements
 * Domain Path: /lang/
 *
 * @package WordPress
@@ -22,14 +22,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
-* Returns the main instance of Gravity_Assist to prevent the need to use globals.
+* Returns the main instance of UI Elements to prevent the need to use globals.
 *
 * @since  1.0.0
-* @return object GFassist
+* @return object Ui_elements
 */
 
 
-class GFassist {
+class Ui_elements {
 	private static $instance = null;
 	private $plugin_path;
 	private $plugin_url;
@@ -57,11 +57,11 @@ class GFassist {
 
 		$this->plugin_path = plugin_dir_path( __FILE__ );
 		$this->plugin_url  = plugin_dir_url( __FILE__ );
-		define('gfassist_PATH', plugin_dir_path(__FILE__));
+		define('ui_elements_PATH', plugin_dir_path(__FILE__));
 
 		// includes
 		require_once(ABSPATH.'wp-includes/pluggable.php');
-		include(gfassist_PATH.'includes/gfassist-settings.php');
+		include(ui_elements_PATH.'includes/ui_elements-settings.php');
 
 		load_plugin_textdomain( $this->text_domain, false, $this->plugin_path . '\lang' );
 
@@ -72,15 +72,15 @@ class GFassist {
 		add_action( 'wp_enqueue_scripts', array( $this, 'frontend_register_styles' ));
 
 		// Remove Gravity froms styles
-		add_action( 'wp_enqueue_scripts', array( $this, 'gfassist_dequeue' ), 999999 );
-		add_action( 'wp_head', array( $this, 'gfassist_dequeue' ), 999999 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'ui_elements_dequeue' ), 999999 );
+		add_action( 'wp_head', array( $this, 'ui_elements_dequeue' ), 999999 );
 
 		register_activation_hook( __FILE__, array( $this, 'activation' ) );
 		register_deactivation_hook( __FILE__, array( $this, 'deactivation' ) );
 
 		// add settings to plugin screen
 		function my_plugin_settings( $settings ) {
-			 $settings[] = '<a href="'. get_admin_url(null, 'admin.php?page=gfassist_page') .'">Settings</a>';
+			 $settings[] = '<a href="'. get_admin_url(null, 'admin.php?page=ui_elements_page') .'">Settings</a>';
 			 // correct order
 			 return array_reverse($settings);
 		}
@@ -122,7 +122,7 @@ class GFassist {
 	*/
 	public function frontend_register_scripts() {
 		wp_enqueue_script(
-			'gfassist_frontendJS',
+			'ui_elements_frontendJS',
 			$this->get_plugin_url().'assets/js/frontend.js',
 			// array( 'jQuery', 'wp-color-picker' ),
 			null,
@@ -135,7 +135,7 @@ class GFassist {
 		// first check that $hook_suffix is appropriate for your admin page
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_script(
-			'gfassist_adminJS',
+			'ui_elements_adminJS',
 			$this->get_plugin_url().'assets/js/admin.js',
 			array( 'wp-color-picker' ),
 			time(),
@@ -148,7 +148,7 @@ class GFassist {
 	*/
 	public function admin_register_styles() {
 		wp_enqueue_style(
-			'gfassist_adminCSS',
+			'ui_elements_adminCSS',
 			$this->get_plugin_url().'assets/css/admin.css',
 			array(),
 			time(),
@@ -160,7 +160,7 @@ class GFassist {
 	*/
 	public function frontend_register_styles() {
 		wp_enqueue_style(
-			'gfassist_frontendCSS',
+			'ui_elements_frontendCSS',
 			$this->get_plugin_url().'assets/css/frontend.css',
 			array(),
 			time(),
@@ -217,10 +217,10 @@ class GFassist {
 			color: {$placeholder_colour};
 		}
 		";
-		wp_add_inline_style( 'gfassist_frontendCSS', $custom_css );
+		wp_add_inline_style( 'ui_elements_frontendCSS', $custom_css );
 	}
 
-	public function gfassist_dequeue() {
+	public function ui_elements_dequeue() {
 		wp_dequeue_style( 'gforms_reset_css' ); // style id
 		wp_dequeue_style( 'gforms_formsmain_css' ); // style id
 		wp_dequeue_style( 'gforms_ready_class_css' ); // style id
@@ -237,41 +237,41 @@ class GFassist {
 	*/
 	private function run_plugin() {
 
-		add_action( 'admin_init', 'gfassist_plugin_settings' );
+		add_action( 'admin_init', 'ui_elements_plugin_settings' );
 
 		add_filter( 'gform_addon_navigation', 'create_menu' );
 		function create_menu( $menus ) {
 			$menus[] = array(
-				'name' => 'gfassist_page',
-				'label' => __( 'Assist GF Options' ),
-				'callback' =>  'gfassist_page'
+				'name' => 'ui_elements_page',
+				'label' => __( 'UI Elements Options' ),
+				'callback' =>  'ui_elements_page'
 			);
 			return $menus;
 		}
 
-		function gfassist_plugin_settings() {
-			register_setting( 'gfassist-options-group', 'borderRadius');
-			register_setting( 'gfassist-options-group', 'fontSize');
-			register_setting( 'gfassist-options-group', 'messageText');
-			register_setting( 'gfassist-options-group', 'messageBackground');
-			register_setting( 'gfassist-options-group', 'primary');
-			register_setting( 'gfassist-options-group', 'hightlight');
-			register_setting( 'gfassist-options-group', 'midGrey');
-			register_setting( 'gfassist-options-group', 'error');
-			register_setting( 'gfassist-options-group', 'label_top' );
-			register_setting( 'gfassist-options-group', 'label_left' );
-			register_setting( 'gfassist-options-group', 'placeholder_colour' );
-			register_setting( 'gfassist-options-group', 'translateY' );
-			// register_setting( 'gfassist-options-group', 'inputBackground');
-			// register_setting( 'gfassist-options-group', 'inputColour');
+		function ui_elements_plugin_settings() {
+			register_setting( 'ui_elements-options-group', 'borderRadius');
+			register_setting( 'ui_elements-options-group', 'fontSize');
+			register_setting( 'ui_elements-options-group', 'messageText');
+			register_setting( 'ui_elements-options-group', 'messageBackground');
+			register_setting( 'ui_elements-options-group', 'primary');
+			register_setting( 'ui_elements-options-group', 'hightlight');
+			register_setting( 'ui_elements-options-group', 'midGrey');
+			register_setting( 'ui_elements-options-group', 'error');
+			register_setting( 'ui_elements-options-group', 'label_top' );
+			register_setting( 'ui_elements-options-group', 'label_left' );
+			register_setting( 'ui_elements-options-group', 'placeholder_colour' );
+			register_setting( 'ui_elements-options-group', 'translateY' );
+			// register_setting( 'ui_elements-options-group', 'inputBackground');
+			// register_setting( 'ui_elements-options-group', 'inputColour');
 		}
 		// Add type to li elements
 		add_filter( 'gform_field_css_class', 'custom_class', 10, 3 );
 		function custom_class( $classes, $field, $form ) {
-			$classes .= ' gfassist-' . $field->type . ' ';
+			$classes .= ' ui_elements-' . $field->type . ' ';
 			return $classes;
 		}
 	}
 }
 
-GFassist::get_instance();
+Ui_elements::get_instance();
