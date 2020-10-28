@@ -1,7 +1,11 @@
 /* phpcs:ignore */
+.gfassist-admin a {
+  outline: none;
+}
 .gfassist-admin h1 {
   margin: 20px 0;
 }
+
 .gfassist-mainsplit {
   display: flex;
   align-items: flex-start;
@@ -32,10 +36,7 @@
   border-radius: 10px;
 }
 .gfassist-admin .gfassist-pod {
-  width: calc(70% - 40px);
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px 20px 0 20px;
-  border-radius: 10px;
+  width: 70%;
 }
 .gfassist-admin .gfassist-flex {
   width: 100%;
@@ -71,4 +72,8 @@
   .gfassist-admin .gfassist-pod {
     width: 100%;
   }
+}
+
+#samples img {
+  max-width: 100%;
 }

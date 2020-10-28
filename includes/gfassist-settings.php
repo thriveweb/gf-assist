@@ -103,10 +103,16 @@ function gfassist_page() {
           <h3>Check out your forms!</h3>
           <p>You now have label animations and modern input styles for select, radio and checkbox input types.</p>
           <p>If you have any issues leave them on <a target="_blank" rel="noreferrer" href="https://github.com/thriveweb/gfassist">Github</a></p>
+          <p><a id="gfassist-show_demo" href="#sample">Show Demo</a></p>
+          <div id="samples">
+            <img src="<?= plugins_url() . '/gf-assist/assets/images/text.gif'; ?>" alt="text sample">
+            <img src="<?= plugins_url() . '/gf-assist/assets/images/checkbox.gif'; ?>" alt="checkbox sample">
+            <img src="<?= plugins_url() . '/gf-assist/assets/images/radio.gif'; ?>" alt="radio sample">
+            <img src="<?= plugins_url() . '/gf-assist/assets/images/select.gif'; ?>" alt="select sample">
+          </div>
         </div>
 
       </div>
-
     </div>
   </div>
   <?php
