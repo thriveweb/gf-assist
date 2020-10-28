@@ -78,6 +78,7 @@ class GFassist {
 		register_activation_hook( __FILE__, array( $this, 'activation' ) );
 		register_deactivation_hook( __FILE__, array( $this, 'deactivation' ) );
 
+		// add settings to plugin screen
 		function my_plugin_settings( $settings ) {
 			 $settings[] = '<a href="'. get_admin_url(null, 'admin.php?page=gfassist_page') .'">Settings</a>';
 			 // correct order
