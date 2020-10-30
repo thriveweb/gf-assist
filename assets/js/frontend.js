@@ -17,12 +17,10 @@ jQuery(function ($) {
    li.ui_elements-email input,\
    li.ui_elements-textarea textarea";
   $(window).load(function () {
-    console.log("load");
     // checking form inputs for values
     const inputEl = document.querySelectorAll(targets);
     inputEl.forEach((inputEl) => {
       let inputValue = $(inputEl).val();
-      console.log(inputValue);
       if (inputValue === "") {
         $(inputEl).removeClass("filled");
         $(inputEl).parents(".gfield").removeClass("focused");
