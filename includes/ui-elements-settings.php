@@ -72,7 +72,7 @@ function ui_elements_page() {
                 </p>
                 <p class="ui_elements-flex">
                   <label for="fontSize">Font Size</label>
-                  <input type="number" name="fontSize" value="<?= (get_option( 'fontSize' ) ? get_option( 'fontSize' ) : 13); ?>" />
+                  <input type="number" name="fontSize" value="<?= (get_option( 'fontSize' ) ? get_option( 'fontSize' ) : 14); ?>" />
                 </p>
                 <p class="ui_elements-flex">
                   <label for="placeholder_colour">Placeholder Colour</label>
@@ -83,7 +83,7 @@ function ui_elements_page() {
                 <h3>Label positions</h3>
                 <p class="ui_elements-flex">
                   <label for="label_top">Label Top Position</label>
-                  <input type="number" name="label_top" value="<?= (get_option( 'label_top' ) ? get_option( 'label_top' ) : 10); ?>" />
+                  <input type="number" name="label_top" value="<?= (get_option( 'label_top' ) ? get_option( 'label_top' ) : 15; ?>" />
                 </p>
                 <p class="ui_elements-flex">
                   <label for="label_left">Label Left position</label>
@@ -91,7 +91,7 @@ function ui_elements_page() {
                 </p>
                 <p class="ui_elements-flex">
                   <label for="translateY">Translate Y - Top position after animation</label>
-                  <input type="number" name="translateY" value="<?= (get_option( 'translateY' ) ? get_option( 'translateY' ) : 200); ?>" />
+                  <input type="number" name="translateY" value="<?= (get_option( 'translateY' ) ? get_option( 'translateY' ) : 220); ?>" />
                 </p>
               </div>
             </div>
