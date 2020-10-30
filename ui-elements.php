@@ -156,8 +156,7 @@ class Ui_elements {
 			'ui_elements_frontendCSS',
 			$this->get_plugin_url().'assets/css/frontend.css',
 			array(),
-			time(),
-		);
+			time());
 
 		// Get options for custom style
 		$borderRadius = get_option('borderRadius');
