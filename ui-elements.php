@@ -145,8 +145,7 @@ class Ui_elements {
 			'ui_elements_adminCSS',
 			$this->get_plugin_url().'assets/css/admin.css',
 			array(),
-			time(),
-		);
+			time());
 	}
 
 	/**
