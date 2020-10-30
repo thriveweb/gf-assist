@@ -33,15 +33,15 @@ function ui_elements_page() {
                 <h3>Form Colours</h3>
                 <p class="ui_elements-flex">
                   <label for="primary">Label Colours</label>
-                  <input type="text" name="primary" value="<?= get_option( 'primary' ); ?>" class="ui_elements-field" data-default-color="#000000" />
+                  <input type="text" name="primary" value="<?= (get_option( 'primary' ) ? get_option( 'primary' ) : '#000000' ); ?>" class="ui_elements-field" />
                 </p>
                 <p class="ui_elements-flex">
                   <label for="hightlight">Hightlight Colour</label>
-                  <input type="text" name="hightlight" value="<?= get_option( 'hightlight' ); ?>" class="ui_elements-field" data-default-color="#000000" />
+                  <input type="text" name="hightlight" value="<?= (get_option( 'hightlight' ) ? get_option( 'hightlight' ) : '#28a9ff' ); ?>" class="ui_elements-field" />
                 </p>
                 <p class="ui_elements-flex">
                   <label for="midGrey">De-selected Grey</label>
-                  <input type="text" name="midGrey" value="<?= get_option( 'midGrey' ); ?>" class="ui_elements-field" data-default-color="#000000" />
+                  <input type="text" name="midGrey" value="<?= (get_option( 'midGrey' ) ? get_option( 'midGrey' ) : '#898989' ); ?>" class="ui_elements-field" />
                 </p>
 
               </div>
@@ -49,15 +49,15 @@ function ui_elements_page() {
                 <h3>Confirmation styles</h3>
                 <p class="ui_elements-flex">
                   <label for="messageText">Message Text</label>
-                  <input type="text" name="messageText" value="<?= get_option( 'messageText' ); ?>" class="ui_elements-field" data-default-color="#000000" />
+                  <input type="text" name="messageText" value="<?= (get_option( 'messageText' ) ? get_option( 'messageText' ) : '#000000' ); ?>" class="ui_elements-field" />
                 </p>
                 <p class="ui_elements-flex">
                   <label for="messageBackground">Message Background</label>
-                  <input type="text" name="messageBackground" value="<?= get_option( 'messageBackground' ); ?>" class="ui_elements-field" data-default-color="#000000" />
+                  <input type="text" name="messageBackground" value="<?= (get_option( 'messageBackground' ) ? get_option( 'messageBackground' ) : '#e0e0e0' ); ?>" class="ui_elements-field" />
                 </p>
                 <p class="ui_elements-flex">
                   <label for="error">Error Color</label>
-                  <input type="text" name="error" value="<?= get_option( 'error' ); ?>" class="ui_elements-field" data-default-color="#000000" />
+                  <input type="text" name="error" value="<?= (get_option( 'error' ) ? get_option( 'error' ) : '#ff3a3a' ); ?>" class="ui_elements-field" />
                 </p>
               </div>
 
@@ -76,7 +76,7 @@ function ui_elements_page() {
                 </p>
                 <p class="ui_elements-flex">
                   <label for="placeholder_colour">Placeholder Colour</label>
-                  <input type="text" name="placeholder_colour" value="<?= get_option( 'placeholder_colour' ); ?>" class="ui_elements-field" data-default-color="#000000" />
+                  <input type="text" name="placeholder_colour" value="<?= (get_option( 'placeholder_colour' ) ? get_option( 'placeholder_colour' ) : '#000000' ); ?>" class="ui_elements-field" />
                 </p>
               </div>
               <div class="ui_elements-section-box">
