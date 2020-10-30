@@ -33,7 +33,6 @@ jQuery(function ($) {
     });
   });
   $(document).ready(function () {
-    console.log("ready");
     // gravity form label focus
     $(targets).focus(function () {
       $(this).parents(".gfield").addClass("focused");

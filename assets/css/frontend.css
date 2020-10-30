@@ -76,6 +76,19 @@
 .gform_wrapper ul li.ui_elements-password,
 .gform_wrapper ul li.ui_elements-email,
 .gform_wrapper ul li.ui_elements-textarea {
+  margin-top: 10px;
+  transition: all 0.4s ease;
+}
+.gform_wrapper ul li.focused.ui_elements-text,
+.gform_wrapper ul li.focused.ui_elements-address,
+.gform_wrapper ul li.focused.ui_elements-name,
+.gform_wrapper ul li.focused.ui_elements-date,
+.gform_wrapper ul li.focused.ui_elements-website,
+.gform_wrapper ul li.focused.ui_elements-number,
+.gform_wrapper ul li.focused.ui_elements-phone,
+.gform_wrapper ul li.focused.ui_elements-password,
+.gform_wrapper ul li.focused.ui_elements-email,
+.gform_wrapper ul li.focused.ui_elements-textarea {
   margin-top: 40px;
 }
 
