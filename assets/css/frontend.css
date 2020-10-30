@@ -369,7 +369,7 @@
 /* errors */
 .gform_wrapper .validation_error,
 .gform_wrapper .validation_message {
-  background: var(--midGrey);
+  background: var(--messageBackground);
   margin-bottom: 40px;
   color: var(--messageText);
   padding: 10px 20px;
