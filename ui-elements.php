@@ -49,10 +49,6 @@ class Ui_elements {
 	* Initializes the plugin by setting localization, hooks, filters, and administrative functions.
 	*/
 	private function __construct() {
-		// session
-		if(session_id() == '') {
-			session_start();
-		}
 
 		$this->plugin_path = plugin_dir_path( __FILE__ );
 		$this->plugin_url  = plugin_dir_url( __FILE__ );
