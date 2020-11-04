@@ -18,7 +18,7 @@ function ui_elements_page() {
       <h1>UI Elements Options</h1>
       <div class="ui_elements-logo">
         <a target="_blank" rel="noreferrer" href="https://thriveweb.com.au">
-          <img src="<?= plugins_url() . '/ui-elements/assets/images/Thrive_logo.gif'; ?>" alt="Thrive digital">
+          <img src="<?= esc_url( plugins_url( 'images/Thrive_logo.gif', __FILE__ ) ); ?>" alt="Thrive digital">
         </a>
       </div>
       <div class="ui_elements-section ui_elements-mainsplit" style="margin: 0 0 40px;">
@@ -83,7 +83,7 @@ function ui_elements_page() {
                 <h3>Label positions</h3>
                 <p class="ui_elements-flex">
                   <label for="label_top">Label Top Position</label>
-                  <input type="number" name="label_top" value="<?= (get_option( 'label_top' ) ? get_option( 'label_top' ) : 15; ?>" />
+                  <input type="number" name="label_top" value="<?= (get_option( 'label_top' ) ? get_option( 'label_top' ) : 15); ?>" />
                 </p>
                 <p class="ui_elements-flex">
                   <label for="label_left">Label Left position</label>
@@ -104,10 +104,10 @@ function ui_elements_page() {
           <p>You now have label animations and modern input styles for select, radio and checkbox input types.</p>
           <p><a id="ui_elements-show_demo" href="#sample">Show Demo</a></p>
           <div id="samples">
-            <img src="<?= plugins_url() . '/ui-elements/assets/images/text.gif'; ?>" alt="text sample">
-            <img src="<?= plugins_url() . '/ui-elements/assets/images/checkbox.gif'; ?>" alt="checkbox sample">
-            <img src="<?= plugins_url() . '/ui-elements/assets/images/radio.gif'; ?>" alt="radio sample">
-            <img src="<?= plugins_url() . '/ui-elements/assets/images/select.gif'; ?>" alt="select sample">
+            <img src="<?= esc_url( plugins_url( 'images/text.gif', __FILE__ ) ); ?>" alt="text sample">
+            <img src="<?= esc_url( plugins_url( 'images/checkbox.gif', __FILE__ ) ); ?>" alt="checkbox sample">
+            <img src="<?= esc_url( plugins_url( 'images/radio.gif', __FILE__ ) ); ?>" alt="radio sample">
+            <img src="<?= esc_url( plugins_url( 'images/select.gif', __FILE__ ) ); ?>" alt="select sample">
           </div>
         </div>
 
