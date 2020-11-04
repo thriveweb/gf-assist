@@ -37,10 +37,10 @@ This plugin works with gravity forms. You must have a full version for this to w
 
 = What is the plugin for? =
 
-This plugin is designed to help you use gravity forms style with modern UX design.
+This plugin is designed to help you use gravity forms style with modern UI design.
 
 == Changelog ==
 
 = 1.0 =
-* 2020-10-28
+* 2020-11-05
 * Initial release
