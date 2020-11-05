@@ -3,7 +3,6 @@
  *
  *  @package WordPress Plugin Template/JS
  */
-
 jQuery(function ($) {
   const targets =
     "li.ui_elements-text input,\
@@ -16,8 +15,7 @@ jQuery(function ($) {
    li.ui_elements-password input,\
    li.ui_elements-email input,\
    li.ui_elements-textarea textarea";
-  $(window).load(function () {
-    // checking form inputs for values
+  $(document).ready(function () {
     const inputEl = document.querySelectorAll(targets);
     inputEl.forEach((inputEl) => {
       let inputValue = $(inputEl).val();
@@ -29,8 +27,6 @@ jQuery(function ($) {
         $(inputEl).parents(".gfield").addClass("focused");
       }
     });
-  });
-  $(document).ready(function () {
     // gravity form label focus
     $(targets).focus(function () {
       $(this).parents(".gfield").addClass("focused");
