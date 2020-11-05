@@ -1,4 +1,4 @@
-=== UI Elements ===
+=== UI Elements for Gravity Forms ===
 Contributors: Thriveweb - Alex frith
 Tags: wordpress, plugin, gravity-forms, gravity, forms
 Requires at least: 5.0
