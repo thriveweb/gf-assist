@@ -1,19 +1,19 @@
 /* phpcs:ignore */
 :root {
-  --borderRadius: 4px;
-  --fontSize: 14px;
+  --UIborderRadius: 4px;
+  --UIfontSize: 14px;
 
-  --inputBackground: transparent;
-  --inputColour: #000;
-  --midGrey: #555;
-  --primary: black;
-  --hightlight: coral;
-  --error: #ce202f;
+  --UIinputBackground: transparent;
+  --UIinputColour: #000;
+  --UImidGrey: #555;
+  --UIprimary: black;
+  --UIhightlight: coral;
+  --UIerror: #ce202f;
 
-  --messageText: #ffffff;
-  --messageBackground: #333;
-  --left: 10px;
-  --top: 10px;
+  --UImessageText: #ffffff;
+  --UImessageBackground: #333;
+  --UIleft: 10px;
+  --UItop: 10px;
 }
 
 .gform_heading,
@@ -47,8 +47,8 @@
   display: none;
 }
 .gform_wrapper ul li label {
-  color: var(--primary);
-  font-size: var(--fontSize);
+  color: var(--UIprimary);
+  font-size: var(--UIfontSize);
 }
 
 .gform_wrapper ul li span label {
@@ -57,13 +57,13 @@
 }
 
 .gfield_required {
-  color: var(--error);
+  color: var(--UIerror);
 }
 
 .ginput_complex span label {
   position: relative;
   font-size: 10px;
-  left: var(--left);
+  left: var(--UIleft);
 }
 
 .gform_wrapper ul li.ui_elements-text,
@@ -103,15 +103,15 @@
 .ui_elements-email .gfield_label,
 .ui_elements-textarea .gfield_label {
   position: absolute;
-  left: var(--left);
-  top: var(--top);
+  left: var(--UIleft);
+  top: var(--UItop);
   z-index: 10;
   transition: all 0.3s ease-out;
 }
 
 .gfield.focused .gfield_label {
   transform: translateY(-200%);
-  font-size: var(--fontSize);
+  font-size: var(--UIfontSize);
 }
 
 .gfield input,
@@ -157,7 +157,7 @@
   box-sizing: border-box;
   display: block;
   margin: 0;
-  border: 1px solid var(--midGrey);
+  border: 1px solid var(--UImidGrey);
   padding: 15px 20px;
   line-height: 1.4;
   -webkit-transition: border-color 0.2s;
@@ -166,10 +166,10 @@
   width: 100%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: var(--inputBackground);
-  font-size: var(--fontSize);
-  color: var(--inputColour);
-  border-radius: var(--borderRadius);
+  background: var(--UIinputBackground);
+  font-size: var(--UIfontSize);
+  color: var(--UIinputColour);
+  border-radius: var(--UIborderRadius);
 }
 
 /* Gravity forms advance */
@@ -205,9 +205,9 @@
 .ginput_container_select select,
 .ui_elements-address .address_country select,
 .ui_elements-time .ginput_container_time:last-child select {
-  background: var(--inputBackground);
+  background: var(--UIinputBackground);
   appearance: none;
-  font-size: var(--fontSize);
+  font-size: var(--UIfontSize);
 }
 
 .ui_elements-address .address_country:after,
@@ -217,8 +217,8 @@
   position: absolute;
   right: 25px;
   top: 55%;
-  border-right: 1px solid var(--midGrey);
-  border-bottom: 1px solid var(--midGrey);
+  border-right: 1px solid var(--UImidGrey);
+  border-bottom: 1px solid var(--UImidGrey);
   height: 10px;
   width: 10px;
   transform: rotate(45deg);
@@ -252,9 +252,9 @@
 }
 
 .ui_elements-radio ul li {
-  border: 1px solid var(--midGrey);
+  border: 1px solid var(--UImidGrey);
   overflow: hidden;
-  border-radius: var(--borderRadius);
+  border-radius: var(--UIborderRadius);
 }
 
 .ui_elements-radio ul label,
@@ -268,7 +268,7 @@
   user-select: none;
   padding: 2px 10px;
   border-left: 25px solid transparent;
-  border-radius: var(--borderRadius);
+  border-radius: var(--UIborderRadius);
 }
 
 .ui_elements-radio li input,
@@ -286,8 +286,8 @@
   right: 100%;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--midGrey);
-  border-radius: var(--borderRadius);
+  background: var(--UImidGrey);
+  border-radius: var(--UIborderRadius);
 }
 
 .ui_elements-radio li input:checked + label::before,
@@ -300,7 +300,7 @@
   right: 100%;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--hightlight);
+  background: var(--UIhightlight);
 }
 
 .ui_elements-radio li input + label::after,
@@ -326,28 +326,28 @@
 /* Placeholders */
 
 .gfield ::-webkit-input-placeholder {
-  color: whitesmoke;
+  color: transparent;
   transition: all 0.3s ease;
 }
 .gfield ::-ms-input-placeholder {
-  color: whitesmoke;
+  color: transparent;
   transition: all 0.3s ease;
 }
 .gfield ::placeholder {
-  color: whitesmoke;
+  color: transparent;
   transition: all 0.3s ease;
 }
 
 /* Messages */
 
 .gform_confirmation_message {
-  background: var(--messageBackground);
-  border-radius: calc(var(--borderRadius) * 2);
+  background: var(--UImessageBackground);
+  border-radius: calc(var(--UIborderRadius) * 2);
   padding: 20px;
   border: none;
-  border-bottom: 1px solid var(--messageBackground);
+  border-bottom: 1px solid var(--UImessageBackground);
   height: auto;
-  color: var(--messageText);
+  color: var(--UImessageText);
   position: relative;
 }
 
@@ -359,7 +359,7 @@
   width: 0;
   height: 0;
   border: 26px solid transparent;
-  border-top-color: var(--messageBackground);
+  border-top-color: var(--UImessageBackground);
   border-bottom: 0;
   border-left: 0;
   margin-left: -13px;
@@ -369,9 +369,9 @@
 /* errors */
 .gform_wrapper .validation_error,
 .gform_wrapper .validation_message {
-  background: var(--messageBackground);
+  background: var(--UImessageBackground);
   margin-bottom: 40px;
-  color: var(--messageText);
+  color: var(--UImessageText);
   padding: 10px 20px;
   border-left: 3px solid;
 }
@@ -384,10 +384,10 @@
 .gform_wrapper .gfield_error input,
 .gform_wrapper .gfield_error select,
 .gform_wrapper .gfield_error textarea {
-  border-color: var(--error);
+  border-color: var(--UIerror);
 }
 
 .gform_wrapper .gfield_error.ui_elements-radio li input + label::before,
 .gform_wrapper .gfield_error.ui_elements-checkbox li input + label::before {
-  background: var(--error);
+  background: var(--UIerror);
 }

@@ -172,16 +172,16 @@ class Ui_elements {
 
 		$custom_css = "
 		:root {
-			--borderRadius: {$borderRadius}px;
-			--fontSize: {$fontSize}px;
-			--midGrey: {$midGrey};
-			--primary: {$primary};
-			--hightlight: {$hightlight};
-			--error: {$error};
-			--messageText: {$messageText};
-			--messageBackground: {$messageBackground};
-			--top: {$label_top}px;
-			--left:{$label_left}px;
+			--UIborderRadius: {$borderRadius}px;
+			--UIfontSize: {$fontSize}px;
+			--UImidGrey: {$midGrey};
+			--UIprimary: {$primary};
+			--UIhightlight: {$hightlight};
+			--UIerror: {$error};
+			--UImessageText: {$messageText};
+			--UImessageBackground: {$messageBackground};
+			--UItop: {$label_top}px;
+			--UIleft:{$label_left}px;
 		}
 		.gfield .gfield_label {
 			left: {$label_top}px;
