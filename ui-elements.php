@@ -14,7 +14,7 @@
 *
 * @package WordPress
 * @author Thriveweb - Alex Frith
-* @since 1.0.0
+* @since 1.0.2
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
