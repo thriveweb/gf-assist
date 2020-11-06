@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
 * Returns the main instance of UI Elements to prevent the need to use globals.
 *
-* @since  1.0.0
+* @since  1.0.3
 * @return object Ui_elements
 */
 

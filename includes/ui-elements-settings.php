@@ -5,7 +5,7 @@
 * This file is used to markup the admin-facing aspects of the plugin.
 *
 * @link       https://thriveweb.com.au/the-lab/
-* @since      1.0.0
+* @since     1.0.3
 *
 * @package    Ui_elements
 * @subpackage Ui_elements/includes
