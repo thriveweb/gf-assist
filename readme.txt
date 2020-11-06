@@ -13,9 +13,9 @@ UI Elements for gravity forms adds label animations and modern input styles for 
 
 Pimp your Gravity forms with UI Elements
 Features:
-- Slick label animations
-- Clean Select/Dropdown style
-- Modern Radio & Checkbox
+- Slick label animations.
+- Clean Select/Dropdown style.
+- Modern Radio & Checkbox.
 
 To increase the chances of success when creating online forms, the interface design should be aesthetically pleasing with a clean design approach.
 UI Elements also takes care of the success notifications with an anchor to the form position in page and friendly speech bubble style.
