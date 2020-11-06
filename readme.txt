@@ -21,7 +21,7 @@ To increase the chances of success when creating online forms, the interface des
 UI Elements also takes care of the success notifications with an anchor to the form position in page and friendly speech bubble style.
 Let's not forget about error messages, they are plain to see so nothing gets lost in translation.
 
-Compatible with Gravity Forms v2+
+Compatible with Gravity Forms v2.+
 
 == Installation ==
 
