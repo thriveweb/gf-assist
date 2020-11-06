@@ -3,7 +3,7 @@ Contributors: frithir, deanoakley
 Tags: wordpress, plugin, gravity-forms, gravity, forms
 Requires at least: 5.0
 Tested up to: 5.5.3
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,10 @@ This plugin works with Gravity Forms v2+. You must have a full version for this 
 This plugin is designed to help you use Gravity Forms style with modern UI design.
 
 == Changelog ==
+
+= 1.0.4 =
+* 2020-11-05
+* Add Support for stepped forms
 
 = 1.0.3 =
 * 2020-11-05
