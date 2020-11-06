@@ -1,10 +1,10 @@
 <?php
 /**
 * Plugin Name: UI Elements for Gravity Forms
-* Version: 1.0.2
+* Version: 1.0.3
 * Plugin URI: https://thriveweb.com.au/the-lab/
 * Description: Now your Gravity Forms will have label animations and modern input styles for select, radio and checkboxes, and input types. With labels and placeholders colour options. Select/Dropdown styled with modern Ui design. Custom styled Radio and Checkbox with modern Ui design and highlight colour options.
-* Author: Thriveweb - Alex Frith
+* Author: Thrive Website Design
 * Author URI: https://thriveweb.com.au/
 * Requires at least: 5.0
 * Tested up to: 5.5.1
